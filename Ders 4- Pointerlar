@@ -1,0 +1,71 @@
+#include <stdio.h>
+#include <stdlib.h>
+    // ne ogrenecegiz :
+    //& isareti ve degisken adrresi kavrami
+    //* isareti ve isaretci kavrami
+    //cifte isaretci kavrami
+int main()
+{
+/*degisken adresleri
+
+    //c programlama dilinde degisken adreslerine erisim
+    char characterAmpersand_1='k';
+    int numberAmpersand_1=45;
+    float floatAmpersand_1=23.4;
+    long long longLongAmpersand_1=4544335456;
+
+    //(and per se and)--> ampersand-->& bu isaret ile bellekteki herhangi bir degiskenin adresi alinabilir
+    // ve degere erisilecekse stringe %u yu kullanmalisin
+
+    //yazdir
+    printf("char degiskeninin degeri :%c adresi :%u \n",characterAmpersand_1,&characterAmpersand_1);
+    printf("int degiskeninin degeri :%d adresi :%u \n",numberAmpersand_1,&numberAmpersand_1);
+    printf("float degiskeninin degeri :%2.2f adresi :%u \n",floatAmpersand_1,&floatAmpersand_1);
+    printf("long degiskeninin degeri :%lld adresi :%u \n",longLongAmpersand_1,&longLongAmpersand_1);
+*/
+
+/*
+    //pointerler
+
+    // once bir degisken tanimla
+    int numberPointer_1=70;
+    //ve bir isaretci tanimla
+    int * isaretci;
+    // simdi isaretciyi degiskenin adresine ata
+    isaretci = &numberPointer_1;
+
+    //simdi  numberPointer_1 ile bazi bilgilere ulasalim
+    printf("numberPointer_1 degiskeninin degeri : %d \n",numberPointer_1);
+    printf("numberPointer_1 degiskeninin adresi : %u \n\n",&numberPointer_1);
+
+    // simdi isaretci ile bazi degiskenlere eriselim
+    printf("isaretciyle eristigimiz degiskenin adresi = %u \n",isaretci);
+    printf("isaretcinin adresi = %u \n",&isaretci);
+    printf("isaretciyle eristigimiz degiskenin degeri %d",*isaretci);
+*/
+
+/*
+    // simdi isaretci kullanarak toplama islemi olusturalim
+    int sayi1,sayi2,toplam;
+    int *isaretci1, *isaretci2;
+
+    isaretci1=&sayi1;// sayi1 i tutacak
+    isaretci2=&sayi2;// sayi2 i tutacak
+
+    printf("iki sayi giriniz:");
+    scanf("%d%d",isaretci1,isaretci2);
+
+    toplam= *isaretci1+ *isaretci2 ;// * isareti kullanilmali
+
+    printf("iki sayinin toplami : %d",toplam);
+*/
+/*
+    //cift isaretci
+
+    //cift isaretci tanimlamak icin  ** kullanmaliyiz
+    int *isaretci,**ciftisaretci;
+    ciftisaretci=&isaretci ;
+*/
+
+    return 0;
+}
