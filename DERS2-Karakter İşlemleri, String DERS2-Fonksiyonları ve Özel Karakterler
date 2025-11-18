@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+    printf("Neler var:\n");
+    printf("karakter ve karakter dizisi islemleri\n");
+    printf("ozel karakterler ve ilgili uygulamalar\n");
+
+    // Tek karakter
+    char karakter = 'k';
+    printf("\n%c\n", karakter);
+
+    // String literal: otomatik olarak '\0' içerir
+    char karakter_dizisi1[50] = "Merhaba dunya\n";
+    printf("%s", karakter_dizisi1);
+
+    // '\0' OLMADAN tanimlanan dizi STRING değildir
+    char karakter_dizisi2[] = {'M','e','r','h','a','b','a',' ','d','u','n','y','a'};
+    printf("karakter_dizisi2 (string DEGIL): ");
+    for(int i = 0; i < sizeof(karakter_dizisi2); i++)
+        putchar(karakter_dizisi2[i]);
+    printf("\n");
+
+    // STRING versiyonu
+    char karakter_dizisi3[50] = "Merhaba dunya";
+    printf("%s\n", karakter_dizisi3);
+
+    printf("\nDizi boyutlari:\n");
+    printf("1- karakter_dizisi1 boyutu = %lu\n", sizeof(karakter_dizisi1));
+    printf("2- karakter_dizisi2 boyutu = %lu (string degil)\n", sizeof(karakter_dizisi2));
+    printf("3- karakter_dizisi3 boyutu = %lu\n", sizeof(karakter_dizisi3));
+
+    // Güvenli strcat
+    strcat(karakter_dizisi3, " + eklendi");
+    printf("\nkarakter_dizisi3 -> %s\n", karakter_dizisi3);
+
+    // Güvenli strcpy
+    strcpy(karakter_dizisi3, karakter_dizisi1);
+    printf("Kopyalama islemi -> %s\n", karakter_dizisi3);
+
+    return 0;
+}
