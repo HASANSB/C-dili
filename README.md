@@ -1,3 +1,1 @@
-#temel düzeyden zor seviyelere kadar çeşit çeşit algoritmalar içeren bir uygulama yaptım,
-#ama bunu denerken gerek üniversitelerde genellikle ilk tercih edilen dil olması ile nedeni de esnek yapısı nedeniyle ile c dilini tercih etmek istedim.
-#istediğiniz zaman bu listeden örnek alabilirsiniz
+Tüm c konularının detaylıca bulunduğu (konu dosyası çalıştırmak için değil daha çok okuyarak öğrenmek için yazıldı) ve bu konuların herbirii ile ilgili örneklerin olduğu dosyalar paylaştım yeni başlayan arkadaşlara başarılar
