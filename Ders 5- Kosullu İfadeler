@@ -1,0 +1,201 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+// IF ELSE KULLANIMI
+
+int main()
+{
+
+    // Neler ogrenecgiz: iliskisel ve mantiksal operatorler
+    // bool degisken tipi
+    // if-else
+    // switch-case
+
+    // iliskisel operatorler
+    //==   Esittir (Equal to)   5 == 3, sonuc 0
+    //>    Buyuktur (Greater than) 5 > 3, sonuc 1
+    //<    Kucuktur (Less than) 5 < 3, sonuc 0
+    //!=   Esit degil (Not equal to) 5 != 3, sonuc 1
+    //>=   Buyuk veya esittir (Greater than or equal to) 5 >= 3, sonuc 1
+    //<=   Kucuk veya esittir (Less than or equal to) 5 <= 3, sonuc 0
+
+    // mantiksal operatorler
+    // && ve
+    // || veya
+    // !  degil
+
+    // aritmetik operatorler
+    // + toplama veya tekli artis
+    // - cikarma veya tekli eksilme
+    // * carpma islemi
+    // / bolme islemi
+    // % Bolme sonrasinda kalan (mod alma islemi)
+    // bunlarin sonuna = isareti koyarsan islemi yaptiktan sonra atar
+
+    // artirma ve azaltma operatoru
+    // ++ artirma operatoru
+    // -- azaltma operatoru
+
+/*
+    // kosullu ifadeler(if else)
+    // if(kosul){kosul saglaniyorsa islem}
+    int say11, say12;
+
+    // Kullanicidan iki sayi al
+    printf("Lutfen iki sayi degeri giriniz: ");
+    scanf("%d%d", &say11, &say12);
+
+    // say11 daha buyukse
+    if(say11 > say12)
+    {
+        printf("%d daha buyuktur", say11);
+    }
+
+    // say12 daha buyukse
+    if(say12 > say11)
+    {
+        printf("%d daha buyuktur", say12);
+    }
+
+    // esitlik durumunu da kontrol et
+    if(say11 == say12)
+    {
+        printf("iki sayi esittir");
+    }
+*/
+
+/*
+    // ic ice gecmis ve merdiven if else kullanimi:
+
+    // girilen 3 sayidan hangisinin daha buyuk oldugunu bulma
+
+    // 3 sayi tanimla
+    int sayi_a, sayi_b, sayi_c;
+
+    // bu 3 sayiyi kullanicidan al;
+    printf("lutfen 3 sayi giriniz");
+    scanf("%d%d%d",&sayi_a,&sayi_b,&sayi_c);
+
+    if(sayi_a>sayi_b && sayi_a>sayi_c) //---> bu kisim 2 kosul birden saglaninca merdiven olur
+    {
+        if (sayi_b>sayi_c)             //---> bu kisim ic ice gecmis kosullu ifadeyi anlatiyor
+        {
+            printf("sayi1>sayi2>sayi3");
+        }
+        else
+        {
+            printf("sayi1>sayi3>sayi2");
+        }
+    }
+    else if (sayi_b>sayi_a && sayi_b>sayi_c)
+    {
+        if (sayi_a>sayi_c)
+        {
+            printf("sayi2>sayi1>sayi3");
+        }
+        else
+        {
+            printf("sayi2>sayi3>sayi1");
+        }
+    }
+    else
+    {
+        if (sayi_a>sayi_b)
+        {
+            printf("sayi3>sayi1>sayi2");
+        }
+        else
+        {
+            printf("sayi3>sayi2>sayi1");
+        }
+    }
+*/
+
+/*
+    // Ornek: girilen karakter alfabetik bir karakter mi ?
+
+    // karakter tanimla
+    char karakter;
+
+    // karakter sec :
+
+    printf("lutfen bir karakter giriniz:");
+    scanf("%c",&karakter);
+
+    if ((karakter>='a' && karakter<='z')  || (karakter>='A' && karakter<='Z'))
+    {
+        printf("girilen karakter alfabetik bir karakterdir");
+    }
+    else
+    {
+        printf("girilen karakter alfabetik bir karakter degildir");
+    }
+*/
+
+/* SWITCH CASE KULLANIMI */
+/*
+    // Eger 7 den fazla if else durumu varsa c bunu kolaylastirmak icin switch case ifadesini olusturmustur hemen bir ornek yapalim :
+    int gun;
+    printf("lutfen kacinci gun oldugunu giriniz:");
+    scanf("%d",&gun);
+
+    switch (gun)
+    {
+        case 1 :
+            printf("Pazartesi");
+            break;
+
+        case 2 :
+            printf("Sali");
+            break;
+
+        case 3 :
+            printf("Carsamba");
+            break;
+
+        case 4 :
+            printf("Persembe");
+            break;
+
+        case 5 :
+            printf("Cuma");
+            break;
+
+        case 6 :
+            printf("Cumartesi");
+            break;
+
+        case 7 :
+            printf("Pazar");
+            break;
+
+        default:
+        {
+            printf("gecersiz deger\n");
+        }
+    }
+*/
+
+/*
+    // switch case de grup olarak ayarlanan bir ornek yapalim mesela hafta ici ve hafta sonu
+    int gun_haftaici;
+    printf("lutfen kacinci gun oldugunu giriniz.");
+    scanf("%d",&gun_haftaici);
+    switch(gun_haftaici)
+    {
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+            printf("hafta ici");
+            break;
+        case 6:
+        case 7:
+            printf("hafta sonu");
+            break;
+    }
+*/
+
+    return 0;
+}
