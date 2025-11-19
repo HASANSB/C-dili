@@ -109,11 +109,13 @@ void Degiskenler_veriTipleri(){
     //eger dizi bos olmayip da [x] olarak boyut verilirse boyut x olur bos yerleri kendisi doldurur ve x ten fazla karakter almaz
 
     //strcat kodu: x ve y olarak 2 string alir ve y yi x in basina ekleyerek bunu x e kaydeder
-    strcat(karakter_dizisi1, karakter_dizisi3);
+    //strcat(karakter_dizisi1, karakter_dizisi3);
     //strcopy x ve y olarak 2 string deger alir y nin icerigini x e kopyalar
-    strcpy(karakter_dizisi1,karakter_dizisi2);
+    //strcpy(karakter_dizisi1,karakter_dizisi2);
     //strcmp x ve y olarak 2 string alir ve aralarindaki karakter sayisi fark yazdirir
-    strcmp(karakter_dizisi1,karakter_dizisi2);
+   // strcmp(karakter_dizisi1,karakter_dizisi2);
+    //DIKKAT: Bu 3 fonksiyonda boyutlar onemlidir yoksa buffer olabilir.
+
     //string de kullanilan kodlar
 
     /*
@@ -170,21 +172,16 @@ void Operatorler(){
 
     printf("----- Operatorler Ozeti ve Onemli Noktalar -----\n\n");
 
-    // Aritmetik
-    c = a + b;
-    printf("Toplama: %d + %d = %d\n", a, b, c);
+     // Aritmetik
+    printf("Toplama: %d + %d = %d\n", a, b, a+b);
 
-    c = a - b;
-    printf("Cikarma: %d - %d = %d\n", a, b, c);
+    printf("Cikarma: %d - %d = %d\n", a, b,a-b);
 
-    c = a * b;
-    printf("Carpma: %d * %d = %d\n", a, b, c);
+    printf("Carpma: %d * %d = %d\n", a, b, a*b);
 
-    c = a / b;
-    printf("Bolme (tam sayi): %d / %d = %d\n", a, b, c);
+    printf("Bolme (tam sayi): %d / %d = %d\n", a, b,a/b);
 
-    c = a % b;
-    printf("Modul (kalan): %d %% %d = %d\n", a, b, c);
+    printf("Modul (kalan): %d %% %d = %d\n", a, b, a%b);
 
     // NOT: Modül operatörü float/double ile kullanilamaz.
     // float mod = x % y; // HATA
