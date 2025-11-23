@@ -98,7 +98,7 @@ void Degiskenler_veriTipleri(){
     char karakter_dizisi1[]="Merhaba dunya\n";
     printf("%s\n",karakter_dizisi1);
     //tek tek karakter de tanimlayabiliriz ama sonuna{ \0} koyulmali
-    //KOYULMAZSA yazdiracağin zaman/0 a kadar devam eder
+    //KOYULMAZSA yazdiracagin zaman/0 a kadar devam eder
     char karakter_dizisi2[]={'M','e','r','h','a','b','a',' ','d','u','n','y','a'};
     printf(" %s\n",karakter_dizisi2);
     //{ \0} KOYULURSA
@@ -113,13 +113,12 @@ void Degiskenler_veriTipleri(){
     //strcopy x ve y olarak 2 string deger alir y nin icerigini x e kopyalar
     //strcpy(karakter_dizisi1,karakter_dizisi2);
     //strcmp x ve y olarak 2 string alir ve aralarindaki karakter sayisi fark yazdirir
-   // strcmp(karakter_dizisi1,karakter_dizisi2);
+    //strcmp(karakter_dizisi1,karakter_dizisi2);
     //DIKKAT: Bu 3 fonksiyonda boyutlar onemlidir yoksa buffer olabilir.
-
     //string de kullanilan kodlar
 
     /*
-    1-\n bir alt satira kecer
+    1-\n bir alt satira gecer
     2-\t tab tusuna basilmis gibi davranir
     3-\0 sonlandirma karakteri bundan sonraki karakteri algilamaz koyulmazsa bellekten rastgele karakter alir
     4-\" cift tirnak isareti ekler
@@ -166,13 +165,13 @@ void Degiskenler_veriTipleri(){
 }
 
 void Operatorler(){
-    int a = 5, b = 2, c;
+    int a = 5, b = 2;
     float x = 5.0, y = 2.0;
     int flag = 0;
 
     printf("----- Operatorler Ozeti ve Onemli Noktalar -----\n\n");
 
-     // Aritmetik
+    // Aritmetik
     printf("Toplama: %d + %d = %d\n", a, b, a+b);
 
     printf("Cikarma: %d - %d = %d\n", a, b,a-b);
@@ -315,13 +314,13 @@ void Fonksiyonlar(){
     // Fonksiyonun genel yapisi:
 // dönüş_tipi fonksiyon_adi(parametre_tipi parametre_adi, ...) {
 //     // Fonksiyonun işlemleri
-//     return değer;  // Eğer dönüş tipi void değilse return zorunlu
+//     return deger;  // Eger dönüş tipi void degilse return zorunlu
 // }
 
 // Önemli noktalar:
-// 1) Return: Fonksiyonun işlem sonucunu çağiran yere geri gönderir.
+// 1) Return: Fonksiyonun işlem sonucunu çagiran yere geri gönderir.
 // 2) Parametreler: Fonksiyona dişaridan veri gönderilir, tür ve sayi uyumlu olmali.
-// 3) Özyineleme (recursive): Fonksiyon kendini çağirir. Sonsuz çağri olmamasi için mutlaka "baz durum" olmali.
+// 3) Özyineleme (recursive): Fonksiyon kendini çagirir. Sonsuz çagri olmamasi için mutlaka "baz durum" olmali.
 
 }
 void Diziler(){
@@ -329,10 +328,10 @@ void Diziler(){
 printf("---------- DIZILER KONUSU OZET VE HATALAR ----------\n");
 
     // :) Tanimlama ve Başlatma
-    int sayilar1[5] = {1, 2, 3, 4, 5};         // doğru
+    int sayilar1[5] = {1, 2, 3, 4, 5};         // dogru
     int sayilar2[]  = {10, 20, 30};            // boyut belirtmeden de olur
-    int sayilar3[5] = {1};                     // 1. elemanı sen belirlersin(1 belirledin) diğerleri 0 olur
-    //   HATA: Aşağidaki hatalidir
+    int sayilar3[5] = {1};                     // 1. elemanı sen belirlersin(1 belirledin) digerleri 0 olur
+    //   HATA: Aşagidaki hatalidir
     // int hataliDizi[3] = {1, 2, 3, 4};       // Fazla eleman
 
     // :) Elemanlara erişim
@@ -384,7 +383,7 @@ printf("---------- DIZILER KONUSU OZET VE HATALAR ----------\n");
     printf("ptr[1] = %d\n", ptr[1]);         // 200(aslında şu demek: *(ptr + 1))
     printf("*(ptr + 2) = %d\n", *(ptr + 2)); // 300
 
-    //   HATA: Diziyi yanliş pointer ile değiştirme
+    //   HATA: Diziyi yanliş pointer ile degiştirme
     // ptr = ptr + 10; printf("%d", *ptr);   // geçersiz erişim 3 eleman var
 
     // :) Karakter dizileri (string)
@@ -416,7 +415,7 @@ void Stringler(){
     char not_terminated[5] = {'H', 'e', 'l', 'l', 'o'}; // '\0' yok!
     printf("HATA-1 (Null yok): %s\n", not_terminated); // Tanimsiz davraniş
 
-    // 🔹 2. String tanimi - Doğru tanim
+    // 🔹 2. String tanimi - Dogru tanim
     char proper1[] = "Merhaba";          // Otomatik '\0' eklenir
     char proper2[8] = "Merhaba";         // '\0' dahil 8 karakterlik yer
     char proper3[20];                    // Elle doldurulabilir
@@ -425,16 +424,16 @@ void Stringler(){
     char target1[5];
     // strcpy(target1, "UzunKelime");   // HATA: Buffer overflow (komut satirinda çöker)
 
-    // 🔹 4. strcpy doğru kullanim
+    // 🔹 4. strcpy dogru kullanim
     char target2[20];
     strcpy(target2, "Kisa");
-    printf("Doğru strcpy: %s\n", target2);
+    printf("Dogru strcpy: %s\n", target2);
 
     // 🔹 5. strcpy kendine kopyalama
     char example[20] = "Ornek";
     strcpy(example, example); // Geçerli ama gereksiz
 
-    // 🔹 6. strcmp örneği
+    // 🔹 6. strcmp örnegi
     char a[] = "abc";
     char b[] = "abc";
     char c[] = "ABC";
@@ -451,7 +450,7 @@ void Stringler(){
 
     // 🔹 7. strcmp yerine strcasecmp (GNU)
     if (strcasecmp(a, c) == 0)
-    printf("Büyük-küçük harf duyarsiz eşitlik\n");
+    printf("Buyuk-kucuk harf duyarsiz esitlik\n");
 
     // 🔹 8. fgets kullanimi ve '\n' temizleme
     char input[50];
@@ -460,19 +459,21 @@ void Stringler(){
     fgets(input, sizeof(input), stdin);
     input[strcspn(input, "\n")] = '\0'; // '\n' varsa temizle
     printf("Girdiniz: %s\n", input);
+    int temizle;
+    while((temizle = getchar())!='\n'|| c!=EOF);//bu Yöntem en profesyonel yöntemdir.
 
     // 🔹 9. strcat hatali kullanim
     char dest[10] = "A";
     // strcat(dest, "UzunMetin"); // HATA: hedefte yeterli alan yok
 
-    // 🔹 10. strcat doğru kullanim
+    // 🔹 10. strcat dogru kullanim
     char full[20] = "Mer";
     strcat(full, "haba");
     printf("strcat sonucu: %s\n", full);
 
     // 🔹 11. strlen hatasi
     char s[] = "Kelime";
-    printf("strlen: %zu\n", strlen(s)); // '\0' dahil değildir
+    printf("strlen: %zu\n", strlen(s)); // '\0' dahil degildir
 
     // 🔹 12. malloc ile string - Unutulan '\0'
     char *dyn = malloc(6); // "Hello" için 5 + 1
@@ -500,9 +501,6 @@ void pointerlar(){//POINTERLAR
     printf("b nin degeri %d\n",b);
     printf("c nin adresi %p\n",&c);
     printf("c nin degeri %d\n\n",c);
-
-    printf("a nin adresi %p\n",&a);
-    printf("a nin degeri %d\n",a);
     printf("ptr nin adresi %p\n",&ptr);
     printf("ptr nin degeri %p\n",ptr);
     printf("ptr nin adresindeki deger %d\n",*ptr);
@@ -516,7 +514,7 @@ void pointerlar(){//POINTERLAR
     printf("ptr nin degeri %p\n",ptr);
     printf("ptr nin adresindeki deger %d\n\n",*ptr);
 
-    *ptr=c; // ptrnin adresindeki deger artık c değeri ile aynı
+    *ptr=c; // ptrnin adresindeki deger artık c degeri ile aynı
     printf("a nin adresi %p\n",&a);
     printf("a nin degeri %d\n",a);
     printf("b nin adresi %p\n",&b);
@@ -526,6 +524,7 @@ void pointerlar(){//POINTERLAR
     printf("ptr nin adresi %p\n",&ptr);
     printf("ptr nin degeri %p\n",ptr);
     printf("ptr nin adresindeki deger %d\n\n",*ptr);
+
     ptr=&b;
     printf("a nin adresi %p\n",&a);
     printf("a nin degeri %d\n",a);
@@ -540,7 +539,7 @@ void pointerlar(){//POINTERLAR
 //-------------------------------------------------------------------------------------------------------------------------------------
 //pointer kullanarak toplama işlemi
     top=*ptr+*ptr;
-    printf("%d\n",top);
+    printf("pointer ile toplama islemi (b+b) = %d\n",top);
 //deger degistirme
     a=0;
     b=1;
@@ -551,7 +550,7 @@ void pointerlar(){//POINTERLAR
     int temp=*pa;
     *pa=*pb;
     *pb=temp;
-    printf("\n%d b\n%d top\n%d pa\n%d pb\n",a,b,*pa,*pb);
+    printf("\n%d a\n%d b\n%d pa\n%d pb\n",a,b,*pa,*pb);
 
     //pointerlara ekleme cikarma
     //pointerlara sadece toplama cikarma bir artirma ve bir eksiltme işlemleri yapilir(+,-,++,--)
@@ -569,9 +568,9 @@ void pointerlar(){//POINTERLAR
     ptrint++;
     ptrchr++;
     ptrdbl++;
-    printf("ptrint nin adresi%d\n",ptrint);//4 artti
-    printf("ptrchr nin adresi%d\n",ptrchr);//1 artti
-    printf("ptrdbl nin adresi%d\n",ptrdbl);//8 artti
+    printf("++ sonrasi ptrint nin adresi%d\n",ptrint);//4 artti
+    printf("++ sonrasi ptrchr nin adresi%d\n",ptrchr);//1 artti
+    printf("++ sonrasi ptrdbl nin adresi%d\n",ptrdbl);//8 artti
     printf("ptrint=%d\nptrchr=%c\nptrdbl=%dl\n",*ptrint,*ptrchr,*ptrdbl);
     //-------------------------------------------------------------------------------------------------------------------------------------
     //NULL pointer
@@ -592,7 +591,7 @@ void pointerlar(){//POINTERLAR
     /*
     int (*fptr)(int, int);//fptr bir pointer’dır,int döndüren ve (int, int) alan bir fonksiyona işaret eder.
     fptr = topla;              // Fonksiyonu gösteren pointer'a atama
-    printf("%d\n", fptr(3, 4));  // 7 — pointer ile fonksiyon çağırma
+    printf("%d\n", fptr(3, 4));  // 7 — pointer ile fonksiyon çagırma
     //İstersen (*fptr)(3, 4) de yazabilirsin ama fptr(3, 4) daha yaygındır.
 
     örnek::
@@ -603,29 +602,29 @@ void pointerlar(){//POINTERLAR
     //POINTERLARI FONKSIYONDA KULLANMA
     printf("lutfen bir sayi giriniz:");
     scanf("%lf",&dbl);
-    double result=ptrilekareHEsapla(&dbl);// dbl nin adresini almalıyız çünkü *dbl * *dbl olmalı
+    double result=ptrilekareHEsapla(&dbl);// dbl nin adresini almalıyız çünkü fonksiyon adres almak istiyor deger degil
     printf("sonuc=%.2f",result);
 //-------------------------------------------------------------------------------------------------------------------------------------
     //DIZILER VE POINTERLAR
     //DIZIISMI[0] IN ADRESI = DIZIISMI IN ADRESI
     //DIZIISMI[2] IN ADRESI = DIZIISMI+2 IN ADRESI
     int dizi[5]={0,1,2,3,4};
-    printf("ilk elemanin adresi %x",&dizi[0]);
-    printf("ilk elemanin adresi %x",dizi);
-    printf("2. elemanin adresi %x",&dizi[1]);
-    printf("2. elemanin adresi %x",dizi+1);
+    printf("\nilk elemanin adresi %x",&dizi[0]);
+    printf("\nilk elemanin adresi %x",dizi);
+    printf("\n2. elemanin adresi %x",&dizi[1]);
+    printf("\n2. elemanin adresi %x",dizi+1);
 
-    printf("ilk elemanin degeri %d",dizi[0]);
-    printf("ilk elemanin degeri %d",*(dizi));
-    printf("2. elemanin degeri %d",dizi[1]);
-    printf("2. elemanin degeri %d",*(dizi+1));
+    printf("\nilk elemanin degeri %d",dizi[0]);
+    printf("\nilk elemanin degeri %d",*(dizi));
+    printf("\n2. elemanin degeri %d",dizi[1]);
+    printf("\n2. elemanin degeri %d",*(dizi+1));
     // buradan dizilerin de bir pointer oldugunu anlayabiliriz
 
 
     a=5;
     b=10;
     int dizi2[5]= {1,8,3,12,9};
-    int matris[3][3]={{10,7,4},{6,2,11},{15,18,22}};
+    int matris[3][3]={{1,2,3},{4,5,6},{7,8,9}};
     int *psayi,*qsayi,*tsayi,*pdizi2,*pmat;
     psayi=&a;
     qsayi=&b;
@@ -636,10 +635,10 @@ void pointerlar(){//POINTERLAR
     printf("a Deger: %d, b Deger:%d \n",a,b);
     printf("psayi Deger: %d, qsayi Deger:%d  \n",*psayi,*qsayi);
     printf("psayi Tuttugu Adres: %d, qsayi Tuttugu Adres:%d \n",psayi,qsayi);
-    printf("psayi Deger: %d, qsayi Deger:%d \n",++*psayi,++*qsayi);
+    printf("psayi Deger: %d, qsayi Deger:%d \n",++*psayi,++*qsayi);// yıldızdan önce ise deger artar
     printf("a Deger: %d, b Deger:%d \n",a,b);
     printf("psayi Deger: %d, qsayi Deger:%d \n",*--psayi,*++qsayi);// ilk pointer bir sonraki veriye gidiyor 2. pointer bir önceki veriye gidiyor
-    printf("psayi Deger: %d, qsayi Deger:%d \n",*psayi++,*qsayi--);
+    printf("psayi Deger: %d, qsayi Deger:%d \n",*psayi++,*qsayi--);//yukarıdakinin tam tersi
     printf("psayi Deger: %d, qsayi Deger:%d \n",*psayi,*qsayi);
     printf("--------------------------------------------------------------- \n");
 
@@ -650,10 +649,10 @@ void pointerlar(){//POINTERLAR
     printf("dizi2 Tuttugu Adres: %d, pdizi2 Tuttugu Adres:%d  \n",dizi2,pdizi2);
     printf("dizi2 Deger:%d, pdizi2 Deger:%d \n",*dizi2,*pdizi2);
     printf("(dizi2+1) Tuttugu Adres: %d, (pdizi2+1) Tuttugu Adres:%d \n",dizi2+1,pdizi2+1);
-    printf("(dizi2+1) Tuttugu Adres: %d, pdizi2+1 Tuttugu Adres:%d \n",dizi2+1,++pdizi2);
-   // dizi2+1 vs dizi2++ arasindaki fark?
+    printf("(dizi2+1) Tuttugu Adres: %d, ++pdizi2 Tuttugu Adres:%d \n",dizi2+1,++pdizi2);
+   // dizi2++ hata verir çünkü diziler conskttur ama pdizi2++ yaparsak buna izin verir ve artık pdizi2=dizi2[1] olur
     pdizi2=dizi2;
-    printf("(dizi2+3) Deger:%d, (pdizi2+3) Deger:%d \n",*(dizi2+3),*(pdizi2+3));
+    printf("*(dizi2+3) Deger:%d, *(pdizi2+3) Deger:%d \n",*(dizi2+3),*(pdizi2+3));
     pdizi2=dizi2;
     printf("(*pdizi2++) Deger:%d \n",*pdizi2++);
     printf("(*pdizi2++) Deger:%d \n",*pdizi2);
@@ -668,15 +667,15 @@ void pointerlar(){//POINTERLAR
     printf("---------------------------------------------------------------- \n");
     pmat=matris;
     printf("matris Tuttugu Adres: %d, pmat Tuttugu Adres:%d  \n",matris,pmat);
-    printf("*matris Deger: %d, *pmat Deger:%d  \n",*matris,*pmat);
+    printf("*matris Deger: %d(yine baslangıc adresi), *pmat Deger:%d  \n",*matris,*pmat);
     printf("**matris Deger: %d, *pmat Deger:%d  \n",**matris,*pmat);
-    printf("matris+1 Tuttugu Adres: %d, pmat+1 Tuttugu Adres:%d  \n",matris+1,pmat+1);
-    printf("*(matris+1) Deger: %d, *(pmat+1) Deger:%d  \n",*(matris+1),*(pmat+1));
-    printf("**(matris+1) Deger: %d, *(pmat+1) Deger:%d  \n",**(matris+1),*(pmat+1));
-    printf("*(matris+1)+1 Tuttugu Adres: %d, (pmat+1)+1 Tuttugu Adres:%d \n",6,(pmat+1)+1);
-    printf("*(*(matris+1)+2) Deger: %d, *((pmat+1)+2) Deger:%d  \n",*(*(matris+1)+2),*((pmat+1)+2));
-    printf("*(matris+1)+2 Tuttugu Adres: %d, (pmat+3)+1 Tuttugu Adres:%d \n",*(matris+1)+2,(pmat+3)+1);
-    printf("*(*(matris+2)+2) Deger: %d, *(pmat+7) Deger:%d  \n",*(*(matris+2)+2),*(pmat+7));
+    printf("matris+1 Tuttugu Adres: %d(matris[1][0]), pmat+1 Tuttugu Adres:%d  \n",matris+1,pmat+1);
+    printf("*(matris+1) Tuttugu Adres: %d(&matris[1][0]), *(pmat+1) Deger:%d  \n",*(matris+1),*(pmat+1));
+    printf("**(matris+1) Deger: %d(matris[1][0]), *(pmat+1) Deger:%d  \n",**(matris+1),*(pmat+1));
+    printf("*(matris+1)+1 Tuttugu Adres: %d(&matris[1][1]), (pmat+1)+1 Tuttugu Adres:%d \n",*(matris+1)+1,(pmat+1)+1);
+    printf("*(*(matris+1)+2) Deger: %d(matris[1][2]), *((pmat+1)+2) Deger:%d  \n",*(*(matris+1)+2),*((pmat+1)+2));
+    printf("*(matris+1)+2 Tuttugu Adres: %d(&matris[1][2]), (pmat+3)+1 Tuttugu Adres:%d \n",*(matris+1)+2,(pmat+3)+1);
+    printf("*(*(matris+2)+2) Deger: %d(&matris[2][2]), *(pmat+7) Deger:%d  \n",*(*(matris+2)+2),*(pmat+7));
     // matrislerde bir pointer
     /*
     pmat=matris;
@@ -698,7 +697,7 @@ void pointerlar(){//POINTERLAR
     *(pmat+1)   -> matris[0][1] -> 2
     *((pmat+1)+2)     -> matris[0][3] = 4
     *(pmat+7)         -> matris[2][1] = 8
-
+    // yani * varsa degerlerde +1 * yoksa adreslerde +1 gider
 
 
 
@@ -745,14 +744,14 @@ void pointerlar2(){
     // ******** Temel pointer tanimlamalari ve örnekler ********
     int a = 5, b = 10, c = 3, *p1, *p2;
 
-    // Temel pointer kullanimi - pointer değişkenleri değişkenlerin adresini tutar
+    // Temel pointer kullanimi - pointer degişkenleri degişkenlerin adresini tutar
     p1 = &a;
     p2 = &b;
 
-    printf("p1 adresi: %p, p1'in gösterdiği değer (a): %d\n", (void*)p1, *p1);
-    printf("p2 adresi: %p, p2'nin gösterdiği değer (b): %d\n", (void*)p2, *p2);
+    printf("\np1 adresi: %p, p1'in gosterdigi deger (a): %d\n", (void*)p1, *p1);
+    printf("p2 adresi: %p, p2'nin gosterdigi deger (b): %d\n", (void*)p2, *p2);
 
-    // Pointer üzerinden değişken değerini değiştirme
+    // Pointer üzerinden degişken degerini degiştirme
     *p1 = 20;
     printf("a'nin yeni degeri *p1 ile degistirildi: %d\n", a);
 
@@ -775,26 +774,26 @@ void pointerlar2(){
     free(pd);
     // printf("%d\n", *pd); // HATA: artik pd geçersiz, kullanmayin
 
-    // 4. Pointer aritmetiğinde sinirlarin dişina çikmak
+    // 4. Pointer aritmetiginde sinirlarin dişina çikmak
     int arr[3] = {1, 2, 3};
     int *pa = arr;
-    printf("arr[1] = %d, *(pa+1) = %d\n", arr[1], *(pa + 1)); // doğru
+    printf("arr[1] = %d, *(pa+1) = %d\n", arr[1], *(pa + 1)); // dogru
     // printf("%d\n", *(pa + 3)); // HATA! dizinin dişina çikildi!
 
     // 5. Const pointer kullanimi
-    const int *ptr1 = &a;    // ptr1'in gösterdiği değer değiştirilemez, ptr1 başka adres gösterebilir
+    const int *ptr1 = &a;    // ptr1'in gösterdigi deger degiştirilemez, ptr1 başka adres gösterebilir
     // *ptr1 = 6;            // HATA!
-    int *const ptr2 = &a;    // ptr2 sabit adres, işaret ettiği değer değiştirilebilir
+    int *const ptr2 = &a;    // ptr2 sabit adres, işaret ettigi deger degiştirilebilir
     *ptr2 = 6;               // OK
     // ptr2 = &b;            // HATA!
 
-    const int *const ptr3 = &a; // adres ve değer sabit, hiçbiri değiştirilemez
+    const int *const ptr3 = &a; // adres ve deger sabit, hiçbiri degiştirilemez
     // *ptr3 = 9;             // HATA!
     // ptr3 = &b;             // HATA!
 
-    // ******** Pointer ile değer geçirme - fonksiyon örnekleri ********
+    // ******** Pointer ile deger geçirme - fonksiyon örnekleri ********
     int sayi = 4;
-    f1(sayi);            // değer geçirme, etkisiz
+    f1(sayi);            // deger geçirme, etkisiz
     printf("sayi (f1 sonrasi) = %d\n", sayi); // hala 4
     f2(&sayi);           // adres geçirme, etkili
     printf("sayi (f2 sonrasi) = %d\n", sayi); // 8
@@ -814,32 +813,32 @@ void pointerlar2(){
     int *pmat = &mat[0][0];
     printf("mat[1][1] = %d, *(pmat+3) = %d\n", mat[1][1], *(pmat+3));
 
-    // ******** Pointerlar ile adres ve değer yazdirma - Detayli örnek ********
+    // ******** Pointerlar ile adres ve deger yazdirma - Detayli örnek ********
     int *ptr = &a;
     printf("\nAdres ve deger bilgileri (detayli):\n");
     printf("a'nin adresi: %p\n", (void*)&a);
     printf("a'nin degeri: %d\n", a);
     printf("ptr'nin adresi: %p\n", (void*)&ptr);
-    printf("ptr'nin tuttuğu adres: %p\n", (void*)ptr);
-    printf("ptr'nin gösterdiği değer: %d\n", *ptr);
+    printf("ptr'nin tuttugu adres: %p\n", (void*)ptr);
+    printf("ptr'nin gösterdigi deger: %d\n", *ptr);
 
-    // Pointer ile değişkenler arasi veri aktarimi
+    // Pointer ile degişkenler arasi veri aktarimi
     b = *ptr;
     printf("\nPtr kullanarak b'nin yeni degeri: %d\n", b);
 
-    // Pointer ile işaret edilen değeri değiştirme
+    // Pointer ile işaret edilen degeri degiştirme
     *ptr = c;
-    printf("Ptr ile a'nin değeri değiştirilmiş: %d\n", a);
+    printf("Ptr ile a'nin degeri degiştirilmiş: %d\n", a);
 
     // Pointer'i başka adrese yönlendirme
     ptr = &b;
-    printf("Ptr artik b'nin adresini gösteriyor, ptr'nin gösterdiği değer: %d\n", *ptr);
+    printf("Ptr artik b'nin adresini gösteriyor, ptr'nin gösterdigi deger: %d\n", *ptr);
 
     // ******** Pointer ile toplama işlemi ********
     int top = *ptr + *ptr;
     printf("Pointer ile toplama islemi: %d\n", top);
 
-    // ******** Pointerlarin adres aritmetiği ve değişimi ********
+    // ******** Pointerlarin adres aritmetigi ve degişimi ********
     int nt = 1, *ptrint;
     ptrint = &nt;
     char ch = 'k', *ptrchr;
@@ -851,7 +850,7 @@ void pointerlar2(){
     printf("ptrchr adresi: %p\n", (void*)ptrchr);
     printf("ptrdbl adresi: %p\n", (void*)ptrdbl);
 
-    printf("ptrint değeri: %d, ptrchr değeri: %c, ptrdbl değeri: %lf\n", *ptrint, *ptrchr, *ptrdbl);
+    printf("ptrint degeri: %d, ptrchr degeri: %c, ptrdbl degeri: %lf\n", *ptrint, *ptrchr, *ptrdbl);
 
     ptrint++;  // int için +4 byte artiş (örnek makinede)
     ptrchr++;  // char için +1 byte artiş
@@ -861,10 +860,10 @@ void pointerlar2(){
     printf("ptrchr yeni adresi: %p\n", (void*)ptrchr);
     printf("ptrdbl yeni adresi: %p\n", (void*)ptrdbl);
 
-    // NOT: Bu pointerlarin yeni adreslerinde bilinmeyen veya rastgele değer olabilir.
+    // NOT: Bu pointerlarin yeni adreslerinde bilinmeyen veya rastgele deger olabilir.
     // *ptrint, *ptrchr, *ptrdbl dereferans etmeden önce dikkat!
 
-    // ******** NULL pointer örneği ********
+    // ******** NULL pointer örnegi ********
     ptr = NULL;
     if (ptr == NULL) {
         printf("Pointer su an NULL, herhangi bir islem yapilamaz.\n");
@@ -876,7 +875,7 @@ void pointerlar2(){
     double result = ptrilekareHEsapla(&dbl);
     printf("Sayinin karesi (pointer ile hesaplandi): %.2f\n", result);
 
-    // ******** Pointerlar ile dizilerde adres ve değer ilişkisi ********
+    // ******** Pointerlar ile dizilerde adres ve deger ilişkisi ********
     int dizi2[5] = {0, 1, 2, 3, 4};
     printf("Dizinin ilk elemaninin adresi: %p\n", (void*)&dizi2[0]);
     printf("Dizinin adresi (dizi2): %p\n", (void*)dizi2);
@@ -891,7 +890,7 @@ void pointerlar2(){
     printf("*ptr_var: %d\n", *ptr_var);
     printf("**ptr_ptr: %d\n", **ptr_ptr);
 
-    // ******** Pointer ile dinamik bellek yönetimi örneği ********
+    // ******** Pointer ile dinamik bellek yönetimi örnegi ********
     int *dinamik_dizi = malloc(5 * sizeof(int));
     if (dinamik_dizi == NULL) {
         perror("Dinamik bellek alloc failed");
@@ -910,7 +909,7 @@ void pointerlar2(){
 void pointerlar_ve_String(){
 // POINTER VE STRING KULLANIMI - TEMEL KAVRAMLAR & HATALAR
 
-    // 1) Sabit string gösterimi - değiştirilemez, sadece okunabilir
+    // 1) Sabit string gösterimi - degiştirilemez, sadece okunabilir
     char *msgptr = "how are u today";
     int i = 0;
     printf("Pointer ile string karakter karakter yazdirma:\n");
@@ -938,7 +937,7 @@ void pointerlar_ve_String(){
     printf("str2 degismedi: %s\n", str2);
 
     // HATA: Yetersiz alan varsa strcat buffer overflow yapar.
-    // Örnek: char s[5]="ABC"; strcat(s,"DEFGH"); --> Bellek taşmasi, güvenlik açiği!
+    // Örnek: char s[5]="ABC"; strcat(s,"DEFGH"); --> Bellek taşmasi, güvenlik açigi!
 
     // strcpy: str2 = str1 kopyalar, str2'nin boyutu yeterli olmali
     strcpy(str2, str1);
@@ -958,13 +957,13 @@ void pointerlar_ve_String(){
     printf("arr dizisi: %s\n", arr);
     printf("ptr pointer: %s\n", ptr);
 
-    // HATA: Pointer değişkenin işaret ettiği string'i değiştirmek mümkün, ama literal string pointer'i ile değişiklik yapilamaz
+    // HATA: Pointer degişkenin işaret ettigi string'i degiştirmek mümkün, ama literal string pointer'i ile degişiklik yapilamaz
 
-    // 5) Pointer ile string dizisine erişim ve değişiklik
-    ptr[0] = 'h'; // arr dizisi değiştirilebilir çünkü dizi bellekte modifiye edilebilir alan
+    // 5) Pointer ile string dizisine erişim ve degişiklik
+    ptr[0] = 'h'; // arr dizisi degiştirilebilir çünkü dizi bellekte modifiye edilebilir alan
     printf("degistirilmis arr: %s\n", arr);
 
-    // HATA: char *p = "HELLO"; p[0] = 'h';  --> Hatali, string literal değiştirilemez.
+    // HATA: char *p = "HELLO"; p[0] = 'h';  --> Hatali, string literal degiştirilemez.
 
     // 6) NULL karakteri '\0' string sonlandiricidir, unutulmamali
     char example[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
@@ -972,7 +971,7 @@ void pointerlar_ve_String(){
 
     // 7) Boşluklu input için gets kullanimi (tehlikeli!)
     // char input[10];
-    // gets(input); // Güvenlik açiği, buffer overflow riski
+    // gets(input); // Güvenlik açigi, buffer overflow riski
     // Bunun yerine fgets kullan:
     // fgets(input, sizeof(input), stdin);
 
@@ -1009,13 +1008,14 @@ enum AYLAR {
 };
 
 // STRUCT tanimlari
+//ogrenciler icin strukt tanımlama
 struct Ogrenciler {
     char* isimSoyisim;
     int no;
     float puan;
     char sifre[20];
 };
-
+// okul icin struct tanımlama hem ogretmen var hem ogrenci var
 struct okul {
     char* ogretmenisim;
     int ogretmenNo;
@@ -1040,6 +1040,8 @@ void showSTRUCTokul(struct okul d) {
 // ASIL KODLARIN FONKSİYONLAŞTIRILMIŞ HALİ
 void struct_union_enum() {
     // STRUCT ÖRNEKLERİ
+
+    //basit struct
     struct Ogrenciler x;
     x.isimSoyisim = "Hasan Selman Bicer";
     x.no = 1;
@@ -1047,18 +1049,22 @@ void struct_union_enum() {
     strcpy(x.sifre, "hasan123");
     printf("%s//%d//%.2f\n", x.isimSoyisim, x.no, x.puan);
 
-    struct Ogrenciler x2 = { "Ali talha Bicer", 2, 85.2, "ali 123" };
-
+    // struct degistirme
     x.isimSoyisim = "degisti";
     x.no = 1;
     x.puan = 80.2;
     strcpy(x.sifre, "hasan1234");
     printf("%s//%d//%.2f\n", x.isimSoyisim, x.no, x.puan);
 
+    //direkt struct baslatma (initialize)
+    struct Ogrenciler x2 = { "Ali talha Bicer", 2, 85.2, "ali 123" };
+
+    //struct kopyalama
     struct Ogrenciler x3;
     x3 = x2;
     printf("%s//%d//%.2f\n", x3.isimSoyisim, x3.no, x3.puan);
 
+    //struct dizisi
     struct Ogrenciler y[4];
     y[0].isimSoyisim = "hasansb";
     y[0].no = 3;
@@ -1070,15 +1076,18 @@ void struct_union_enum() {
     y[1].puan = 46.0;
     strcpy(y[1].sifre, "hasannn123");
 
+    //dizinin ilk 2 elamanını yazdırma
     for (int i = 0; i < 2; i++) {
         printf("\n%d. ogrenci\n", i + 1);
         printf("%s//%d//%.2f//%s\n", y[i].isimSoyisim, y[i].no, y[i].puan, y[i].sifre);
     }
 
+    //fonksiyonla struct
     showSTRUCT(x);
 
+    //pointer ile struct
     struct Ogrenciler hasan;
-    struct Ogrenciler* ptr = &hasan;
+    struct Ogrenciler *ptr = &hasan;
 
     ptr->isimSoyisim = "pointer";
     ptr->no = 2;
@@ -1086,10 +1095,11 @@ void struct_union_enum() {
     strcpy(ptr->sifre, "pointer123");
     showSTRUCT(*ptr);
 
+    // struct icinde struct
     struct okul d;
     d.ogretmenisim = "1234";
     d.ogretmenNo = 0;
-    d.ogrenci.isimSoyisim = "hasanmudurr";
+    d.ogrenci.isimSoyisim = "hasanmudur";
     d.ogrenci.no = 12;
     d.ogrenci.puan = 34.0;
     strcpy(d.ogrenci.sifre, "mudursifre");
@@ -1099,6 +1109,7 @@ void struct_union_enum() {
     struct Nokta { int x, y; };
     struct Nokta noktalar[3] = {{1,2},{3,4},{5,6}};
     printf("noktalar[1].x = %d\n", noktalar[1].x);
+    printf("noktalar[1].y = %d\n", noktalar[1].y);
 
     //   HATA: struct dizisinin boyutunu aşma
     // noktalar[3].x = 10; // Geçersiz
@@ -1109,7 +1120,7 @@ void struct_union_enum() {
 
     name isim = "hasan de";
     lli sayi = 124242342342314;
-
+// struct ile typdef kullanımı
     typedef struct {
         char* name;
         int no;
@@ -1125,10 +1136,12 @@ void struct_union_enum() {
         myConst[i] = i;
     }
     for (int i = 1; i <= 12; i++) {
-        printf("\nAy %d: %d", i, myConst[i]);
+        printf("\nAy %d: %d", i, myConst[i]);//(ocak subat  yazmaz sadece 1234 diye yazar)
     }
 
     // UNION ÖRNEKLERİ
+    //union tüm verileri aynı anda saklamaz mesela aşaüıdaki en büyük byte lı veri 40 sa 40 lık bir alan açar ve hepsini o alanda saklar
+    // ama sadece en son yazılan doğru sonucu verşr
     union unionS {
         char name[40];
         int age;
@@ -1232,17 +1245,18 @@ void Dinamik_Bellek_Yonetimi(){
 }
 void Dosya_islemleri(){
 
- FILE *fptr ,*fptrcopy;// yapacagimiz islemler icin dosya pointerlari ayarliyoruz.
+
+    FILE *fptr ,*fptrcopy;// yapacagimiz islemler icin dosya pointerlari ayarliyoruz.
     char ch;//komut blogundan tek karakter okumak icin.
     char stringOkumakIcin[100];
 
      // dosya islemi yapmak icin dosyayi aciyoruz !!Yolu kopyala yapistir yaptiktan sonra iki tane / isareti olmali
      //eger Dosya yolu kopyalamazsan kodun oldugu klasorde dosyayi arar.
-     fptr=fopen("C:\\YAZILIM\\c\\Github c projelerim\\Dosya_islemleri_deneme\\Dosyalar\\islemYapacagimDosya.txt","w+");
-     fptrcopy=fopen("C:\\YAZILIM\\c\\Github c projelerim\\Dosya_islemleri_deneme\\Dosyalar\\KopyalayacagimDosya.txt","w+");
+     fptr=fopen("islemYapacagimDosya.txt","w+");
+     fptrcopy=fopen("KopyalayacagimDosya.txt","w+");
      //Dosya acma modlari
         // w=BASTAN YAZMA dosya varsa acar yoksa olusturur.eger hic bir sey yazmazsan veriler kayboluyor
-        // a=SONDAN YAZMA dosya varsa acar yoksa olusturur.eger hic bir sey yazmazsan veriler kayboluyor
+        // a=SONDAN YAZMA dosya varsa acar yoksa olusturur.eger hic bir sey yazmazsan bir şey değişmeden kapanır.
         // r=BASTAN OKUMA dosya varsa acar yoksa NULL DÖNDÜRÜR;
         // W+/R+/A+= OKUMA VE YAZMA IsLEMLERI
 //-------------------------------------------------------------------------------------------------------------------------------
@@ -1264,19 +1278,22 @@ void Dosya_islemleri(){
     //    |fputs	    |Duz metin yazmak	 |  Basit ve hizli	          |  Sadece string yazar|
     //    |fwrite  	    |Ikili veri (binary) |	Hizli, dosya kopyalama	  |  Okumasi zordur     |
     //    |putc	        |Tek karakter yazmak |karakter kontrolu kolay     |Sadece tek karakter yazar,verimsiz
-    //    |fputc        |Tek karakter yazmak |karakter kontrolu kolay     |Sadece tek karakter yazar,verimsiz--ptc den kullanisli
+    //    |fputc        |Tek karakter yazmak |karakter kontrolu kolay     |Sadece tek karakter yazar,verimsiz--putc den kullanisli
     putc('p',fptr);//'' kullanilmalidir yoksa anlamsiz yazilara donusur
     fputc('f',fptr);//'' kullanilmalidir yoksa anlamsiz yazilara donusur
     fprintf(fptr,"\nFPRINTF=(%d) gibi Veri tipine gore dosyaya yazi yazabilir\n",1);
     fputs("Fputs ile yazilmistir: Tek satirlik yazilar,	Format kontrolu yapmaz, direkt yazi basar (bu da performans avantaji saglar)\n",fptr);
-    int sayilar[]={1,2,3,4,5}; //fwrite ile yazmak icin
-    fwrite(sayilar,sizeof(int),sizeof(sayilar),fptr);
-    fread(sayilar,sizeof(int),sizeof(sayilar),fptr);
+
+   /* int sayilar[]={1,2,3,4,5}; //fwrite ile yazmak icin
+    size_t elemanSayisi = sizeof(sayilar) / sizeof(sayilar[0]);
+    fwrite(sayilar,sizeof(int),elemanSayisi,fptr);//su an iasaretciyi okumak icin dogru yere koy
+    fseek(fptr,-elemanSayisi * sizeof(int),SEEK_CUR);
+    fread(sayilar,sizeof(int),elemanSayisi,fptr);
     for (int i=0;i<5;i++)
     {
         printf("\n%d",sayilar[i]);
     }
-    fprintf(fptr,"\n");
+    fprintf(fptr,"\n");*/
 //---------------------------------------------------------------------------------------------------------------------------------
  //Dosyaya komut blogundan yazi yazma
    //1- Komut blogundaki yazilari okuma
@@ -1291,10 +1308,10 @@ void Dosya_islemleri(){
     //|fread	|Ikili veri okuma						    |Veriyi hizlica bloklar halinde okur		|Metin dosyalarinda karmasik olabilir			        |
 
    //2-Okunan degerleri yazma
-    //|Fonksiyon| Ne İçin Kullanilir?                  | Avantaji                                   | Dezavantaji                                        | En Uygun Olduğu Senaryo                           |
+    //|Fonksiyon| Ne İçin Kullanilir?                  | Avantaji                                   | Dezavantaji                                        | En Uygun Oldugu Senaryo                           |
     //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
   //| fprintf   | Formatli veriyi dosyaya yazmak       | Esnek, her veri türüyle uyumlu             | Format hatalari olabilir, karmaşik olabilir        | Sayi + metin + özel karakter karişik yazma        |
-  //| fwrite    | İkili (binary) veriyi dosyaya yazmak | Hizli, çok veri bloklarini ayni anda yazar | Metin yazarken kontrol zordur, okunabilirlik düşer | Çok veri (örneğin struct dizisi) yazma            |
+  //| fwrite    | İkili (binary) veriyi dosyaya yazmak | Hizli, çok veri bloklarini ayni anda yazar | Metin yazarken kontrol zordur, okunabilirlik düşer | Çok veri (örnegin struct dizisi) yazma            |
   //| putc      | Tek karakteri dosyaya yazmak         | Basit, hizli                               | Sadece karakter yazar, string yazamaz              | Sadece 1 karakter yazma                           |
   //| fputc     | Dosyaya karakter yazmak              | Standarttir, güvenilirdir                  | Sadece karakter yazar                              | Sadece 1 karakter yazma                           |
   //| fputs     | Dosyaya string (metin) yazmak        | Kolay kullanim, string için ideal          | Sadece null ile biten dizileri yazar, format yok   | String (metin) verisi yazma                       |
@@ -1302,11 +1319,14 @@ void Dosya_islemleri(){
     //getc ile okuma
     printf("getc ile karakter oku:");
     ch=getc(stdin);
+
+    int c;
+    while ((c = getchar()) != '\n' && c != EOF); // buffer temizleme
     //putc ile yazma (putc ve fputc neredeyse aynidir)
     putc(ch,fptr);
     rewind(stdin);
 
-    //getch ile okuma(komut blogunda tek karakter icin tercih)
+    //getchar ile okuma(komut blogunda tek karakter icin tercih)
     printf("getchar ile karakter oku:");
     ch=getchar();
     //fputc ile yazma
@@ -1341,43 +1361,41 @@ void Dosya_islemleri(){
     fprintf(fptr,"%s",stringOkumakIcin);
     rewind(stdin);
 
-    printf("fread ile karakter okuyamayiz cunku komut bloguna binary yazamiyoruzancak yazabilseydik boyle okunurdu");
-    printf("size_t bytesRead=fread(stringOkumakIcin,sizeof(char),sizeof(stringOkumakIcin),stdin);");
+    printf("\nfread ile karakter okuyamayiz cunku komut bloguna binary yazamiyoruzancak yazabilseydik boyle okunurdu");
+    printf("\nsize_t bytesRead=fread(stringOkumakIcin,sizeof(char),sizeof(stringOkumakIcin),stdin);");
 //------------------------------------------------------------------------------------------------------------------------------------------------------
     //4-dosyadan yazi okuma ve ekrana yazdirma
-//| Fonksiyon                        | Amaç                                         |Dönüş Değeri                 | Ne Zaman Bitirir?                         | Yaygin Hatalar                              | Dikkat Edilmesi Gerekenler |
+//| Fonksiyon                        | Amaç                                         |Dönüş Degeri                 | Ne Zaman Bitirir?                         | Yaygin Hatalar                              | Dikkat Edilmesi Gerekenler |
 //|----------------------------------|----------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-//| getc(FILE *fp)                   | Dosyadan 1 karakter okur                     | Okunan karakter (int), EOF  | Dosya sonu (EOF)                          | int değil char ile karşilaştirmak (hatali) | EOF kontrolü yaparken int türü kullan |
+//| getc(FILE *fp)                   | Dosyadan 1 karakter okur                     | Okunan karakter (int), EOF  | Dosya sonu (EOF)                          | int degil char ile karşilaştirmak (hatali) | EOF kontrolü yaparken int türü kullan |
 //| fgets(str, size, FILE *fp)       | Güvenli satir okuma                          | char*, NULL                 | \n veya size-1 karakter okununca veya EOF | \n karakterini içerir                      | Dosya veya stdin fark etmez, NULL kontrolü yap |
-//| fscanf(FILE *fp, "%s", str)      | Dosyadan formatli veri okur                  | Okunan öğe sayisi           | Format uymadiğinda veya EOF               | Format uyuşmazliği, boşlukla kesilme       | fscanf(fp, "%[^\n]", str) şeklinde kullanilabilir |
-//| fread(ptr, size, count, FILE *fp)| Binary veri bloklarini okur                  | Okunan öğe sayisi (size_t)  | Dosya sonu veya yetersiz veri             | Text dosyada anlamsiz veri olabilir        | Genelde struct gibi binary veri için kullanilir |
+//| fscanf(FILE *fp, "%s", str)      | Dosyadan formatli veri okur                  | Okunan öge sayisi           | Format uymadiginda veya EOF               | Format uyuşmazligi, boşlukla kesilme       | fscanf(fp, "%[^\n]", str) şeklinde kullanilabilir |
+//| fread(ptr, size, count, FILE *fp)| Binary veri bloklarini okur                  | Okunan öge sayisi (size_t)  | Dosya sonu veya yetersiz veri             | Text dosyada anlamsiz veri olabilir        | Genelde struct gibi binary veri için kullanilir |
 //|----------------------------------|----------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
  //Okunan degerleri yazma
-//|Fonksiyon| Ne İçin Kullanilir?                    | Avantaji                                   | Dezavantaji                                        | En Uygun Olduğu Senaryo                           |
+//|Fonksiyon| Ne İçin Kullanilir?                    | Avantaji                                   | Dezavantaji                                        | En Uygun Oldugu Senaryo                           |
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 //| fprintf   | Formatli veriyi dosyaya yazmak       | Esnek, her veri türüyle uyumlu             | Format hatalari olabilir, karmaşik olabilir        | Sayi + metin + özel karakter karişik yazma        |
-//| fwrite    | İkili (binary) veriyi dosyaya yazmak | Hizli, çok veri bloklarini ayni anda yazar | Metin yazarken kontrol zordur, okunabilirlik düşer | Çok veri (örneğin struct dizisi) yazma            |
+//| fwrite    | İkili (binary) veriyi dosyaya yazmak | Hizli, çok veri bloklarini ayni anda yazar | Metin yazarken kontrol zordur, okunabilirlik düşer | Çok veri (örnegin struct dizisi) yazma            |
 //| putc      | Tek karakteri dosyaya yazmak         | Basit, hizli                               | Sadece karakter yazar, string yazamaz              | Sadece 1 karakter yazma                           |
 //| fputc     | Dosyaya karakter yazmak              | Standarttir, güvenilirdir                  | Sadece karakter yazar                              | Sadece 1 karakter yazma                           |
 //| fputs     | Dosyaya string (metin) yazmak        | Kolay kullanim, string için ideal          | Sadece null ile biten dizileri yazar, format yok   | String (metin) verisi yazma                       |
-//| puts	  |Stringi ekrana(stdout)yazdirir.otomatik\n ekler||Basit ve otomatik satir sonu ekler|	Sadece stdout'a yazar, dosyaya değil!	           |Terminale/ekrana tek satir metin bastirma          |
+//| puts	  |Stringi ekrana(stdout)yazdirir.otomatik\n ekler||Basit ve otomatik satir sonu ekler|	Sadece stdout'a yazar, dosyaya degil!	           |Terminale/ekrana tek satir metin bastirma          |
 
 
 
 printf("----------------getc ve putc-------------------------------------------------------------------------------------------------------");
     //getc ve putc ile dosyayi okuyup yazmak
     rewind(fptr);
-    while(!feof(fptr))
+    while((ch = getc(fptr))!=EOF)
     {
-    ch=getc(fptr);
     putc(ch,stdout);
     }
 printf("----------------getc ve fputc-------------------------------------------------------------------------------------------------------");
     //getc ve fputc ile ekrana yazma
     rewind(fptr);
-    while(!feof(fptr))
+    while((ch = getc(fptr))!=EOF)// !feof(fptr) bu kodla son karakter iki kez okunabilir
     {
-    ch=getc(fptr);
     fputc(ch,stdout);
     }
 printf("----------------fgets ve puts-----------------------------------------------------------------------------------------------------");
@@ -1397,14 +1415,14 @@ printf("----------------fgets ve fputs------------------------------------------
 
     //BİNARY OLDUGU İCİNBU İKİSİ HATALI
    /* printf("------------fscanf ve printf-------------------------------------------------------------------------------------------------------");
-    //fscanf ve printf ile ekrana yazma(binaary gördüğünde hata verir)
+    //fscanf ve printf ile ekrana yazma(binaary gördügünde hata verir)
     rewind(fptr);
     while(fscanf(fptr,"%[^\n]\n",stringOkumakIcin))
     {
         printf("%s",stringOkumakIcin);
     }
     printf("------------fscanf ve fprintf-------------------------------------------------------------------------------------------------------");
-    //fscanf ve fprintf ile ekrana yazma(binaary gördüğünde hata verir)
+    //fscanf ve fprintf ile ekrana yazma(binaary gördügünde hata verir)
     rewind(fptr);
     while(fscanf(fptr,"%[^\n]\n",stringOkumakIcin))
     {
@@ -1430,15 +1448,15 @@ printf("----------------fgets ve fputs------------------------------------------
         //rewind(fptr) "konum göstergecini basa alir"
         //0
         rewind(fptr);
-        long pozisyon = ftell(fptr); // Dosyanin boyutunu döner (son byte + 1)
+        long pozisyon = ftell(fptr); // Dosyanin isaretci konumu döner (son byte + 1)
         printf("imlecin byte'i %ld\n", pozisyon);
         //başlangiçtan itibaren+5
         fseek(fptr,5,SEEK_SET);
-        pozisyon = ftell(fptr); // Dosyanin boyutunu döner (son byte + 1)
+        pozisyon = ftell(fptr); // Dosyanin isaretci konumudöner (son byte + 1)
         printf("imlecin byte'i %ld\n", pozisyon);
         //bulunan konumdan -3
         fseek(fptr,-3,SEEK_CUR);
-        pozisyon = ftell(fptr); // Dosyanin boyutunu döner (son byte + 1)
+        pozisyon = ftell(fptr); // Dosyanin isaretci konumu döner (son byte + 1)
         printf("imlecin byte'i %ld\n", pozisyon);
         //sonundan -5
         fseek(fptr,-5,SEEK_END);
@@ -1451,7 +1469,7 @@ printf("----------------fgets ve fputs------------------------------------------
         fputs(stringOkumakIcin,fptrcopy);
     }
     //İşlemler için dikkat eedilmesi gereken şeyler
-    /* 1-dosyayi açarken kopyaladiğimiz yolda bu şekilde :// iki tane slash olmali
+    /* 1-dosyayi açarken kopyaladigimiz yolda bu şekilde :// iki tane slash olmali
      * 2-w bastan a sondan yazar r bastan okur.
      * 3-dosyanin acilip acilmadigin ikontrol etmek icin 2 yol var: fptr==NULL YADA !fptr
      * 4-acilmayan dosyadan cikmanin 2 yolu var : printf/ exit(EXIT_FAILURE) YADA perror /exit(EXIT_FAILURE)
@@ -1464,6 +1482,7 @@ printf("----------------fgets ve fputs------------------------------------------
     //Dosyalari kapatiyoruz
     fclose(fptr);
     fclose(fptrcopy);
+    printf("Dosyalar kapatildi \n");
 }
 
 //#define "x" gördügun yere "y" yaz seklinde calisir
@@ -1477,18 +1496,7 @@ printf("----------------fgets ve fputs------------------------------------------
 //pragma
 #pragma message(">>>Derleyici Baslatiliyor Lutfen Bekleyin...")
 void Prepocessor_Direktifleri(){//Kutuphane kodlari da bir onislemci komutudur
-#include <stdio.h>
-#include <stdlib.h>
-//#define "x" gördügun yere "y" yaz seklinde calisir
-#define YAZDIR printf//komutun amaci bazi degerleri tanimlamaktir
-//const ve define benzerdir ama const hafizada yer kaplar ayrica dizilerin boyut kismina const yazamazsin ama define yazabilirsin
 
-//Kosullu define
-#define MAX(x,y) (x>y)? x:y
-#define MIN(x,y) (x<y)? x:y
-#define Mynumber 10//if kismi icin
-//pragma
-#pragma message(">>>Derleyici Baslatiliyor Lutfen Bekleyin...")
    //onislemci( Preprocessor ) komutlari: onislemci derlenmeden once kendisinden bir sey istiyor mu diye kontrol eder
     YAZDIR("4\n");//tanimladigimiz number1 calisiyor
     YAZDIR("max deger (5,10)= %d\n",MAX(5,10));
@@ -1533,17 +1541,12 @@ void Prepocessor_Direktifleri(){//Kutuphane kodlari da bir onislemci komutudur
     //#pragma once	Dosya sadece bir kez dahil edilsin
     //#pragma warning	Uyarilari aç/kapat (MSVC)
     //#pragma GCC diagnostic	GCC/Clang uyarilarini bastir
-    //#pragma pack(n)	Yapi hizalamasini değiştir
+    //#pragma pack(n)	Yapi hizalamasini degiştir
     //#pragma message	Derleme sirasinda mesaj yazdir
-    //#pragma region	IDE’de kod katlama sağlar
+    //#pragma region	IDE’de kod katlama saglar
     //#pragma deprecated	Eskimiş fonksiyon uyarisi
 
 }
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-
-
 void Const_Volatile() {
     // ------------------ CONST OZETI VE HATALAR ------------------
 
@@ -1591,7 +1594,8 @@ void Const_Volatile() {
     int *const hatali = &deg; // pointer sabit, veri degisebilir
 
     // ------------------ VOLATILE OZETI VE HATALAR ------------------
-
+    // derleyici bir sebepten dolayı degerin degismeyecegini düsünürse degeri ramdan alıp registerde saklayabilir(cünkü register daha hızlıdır) ör : led ısık bir veriyi degistiriyordur ama kod bunu bilmiyor
+    // böyle veriler icin volatile girdiğinde derleyici veriyi registerden almak yerine ramdan alır(daha yavas alır)
     // 1. volatile degisken: derleyici bu degeri optimize etmez
     volatile int durum = 0;
 
