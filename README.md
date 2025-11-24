@@ -1,1 +1,1 @@
-Tüm c konularının detaylıca bulunduğu (konu dosyası çalıştırmak için değil daha çok okuyarak öğrenmek için yazıldı) ve bu konuların herbirii ile ilgili örneklerin olduğu dosyalar paylaştım yeni başlayan arkadaşlara başarılar
+C ile ilgili calısmalarım var branchlardan kontrol edebilirsiniz 
