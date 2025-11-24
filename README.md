@@ -1,15 +1,26 @@
-BURADAKİ DOSYALARIN AMACI ;
------------------------------------------------------------------------------------------
-1- TUM C KONULARI
-burada detaylıca araştırıp bulduğum tum c konularına yer verdim 
------------------------------------------------------------------------------------------
-2- BASIT C ALGORŞTMALARI 
-bunlar genelde üniversite ogrencilerinin okulda yaptıkları basıt algoritmalardır
------------------------------------------------------------------------------------------
-3-TELEFON REHBERİ
-burada  4 fonksiyonlu bir telefon rehberş ekledim 
-1-numara ekleme
-2-numaraları listeleme
-3-numara arama
-4-çıkış
------------------------------------------------------------------------------------------
+Projeler
+1. Tüm C Konuları
+
+C dilinin temel konuları ve örnekleri.
+
+Değişkenler, döngüler, fonksiyonlar, pointer’lar, diziler ve string işlemleri gibi başlıklar içerir.
+
+2. Basit C Algoritmaları
+
+Üniversite düzeyinde temel algoritmalar.
+
+Örnekler: Asal sayılar, Fibonacci dizisi, faktöriyel hesaplama, basit arama ve sıralama algoritmaları.
+
+3. Telefon Rehberi
+
+4 fonksiyonlu uygulama:
+
+Numara ekleme
+
+Numara listeleme
+
+Numara arama
+
+Çıkış
+
+Dosya işlemleri ve struct yapısı kullanılarak geliştirilmiştir.
