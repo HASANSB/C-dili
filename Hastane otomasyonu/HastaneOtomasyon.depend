@@ -1,0 +1,39 @@
+# depslib dependency file v1.0
+1764171986 source:c:\yazilim\c\c calismalarim\githuba yükle\hastaneotomasyon\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Menu.h"
+	"Structs.h"
+
+1764172130 c:\yazilim\c\c calismalarim\githuba yükle\hastaneotomasyon\menu.h
+	"Structs.h"
+
+1764084277 c:\yazilim\c\c calismalarim\githuba yükle\hastaneotomasyon\structs.h
+
+1764252801 source:c:\yazilim\c\c calismalarim\githuba yükle\hastaneotomasyon\menu.c
+	"Menu.h"
+	"Structs.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<windows.h>
+
+1764171986 source:c:\yazilim\c\c calismalarim\githuba yükle\yeni klasör\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Menu.h"
+	"Structs.h"
+
+1764172130 c:\yazilim\c\c calismalarim\githuba yükle\yeni klasör\menu.h
+	"Structs.h"
+
+1764542466 c:\yazilim\c\c calismalarim\githuba yükle\yeni klasör\structs.h
+
+1764610228 source:c:\yazilim\c\c calismalarim\githuba yükle\yeni klasör\menu.c
+	"Menu.h"
+	"Structs.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<windows.h>
+
